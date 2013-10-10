@@ -9,8 +9,8 @@ The chances for the different actions work as follows: the chance for every acti
 
 ####Commands
 <pre>/ufish reload-config - Reloads the configuration file.
-/ufish debug-mode <true | false> - If set to true, enables the debug mode, otherwise disables.
-/ufish debug-action <ID> - Sets the action ID to the given one.</pre>
+/ufish debug-mode \<true | false\> - If set to true, enables the debug mode, otherwise disables.
+/ufish debug-action \<ID\> - Sets the action ID to the given one.</pre>
 
 ####Build
 The plugin requires the Bukkit API to be linked in order to be built.
