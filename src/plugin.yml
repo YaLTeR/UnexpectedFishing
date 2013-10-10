@@ -1,0 +1,13 @@
+name: UnexpectedFishing
+main: unexpectedfishing.UnexpectedFishingMain
+version: 1.0
+author: YaLTeR
+load: startup
+commands:
+  ufish:
+    description: Manage UnexpectedFishing.
+    usage: |
+           /<command> reload-config - Reloads the configuration file.
+           /<command> debug-mode <true | false> - If set to true, enables the debug mode, otherwise disables.
+           /<command> debug-action <ID> - Sets the action ID to the given one.
+    permission: unexpectedfishing.manage

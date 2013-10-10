@@ -4,3 +4,11 @@
 *.jar
 *.war
 *.ear
+
+# Eclipse Stuff #
+.externalToolBuilders/
+.settings/
+bin/
+.classpath
+.project
+antbuild.xml
