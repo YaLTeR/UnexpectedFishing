@@ -225,7 +225,14 @@ public class UnexpectedFishingReflection
             
             try
             {
-                method = clazz.getMethod( name, args );
+                if ( ( args != null ) & ( args.length != 0 ) )
+                {
+                    method = clazz.getMethod( name, args );
+                }
+                else
+                {
+                    method = clazz.getMethod( name, new Class[0] );
+                }
             }
             catch ( Exception e )
             {
@@ -258,6 +265,6 @@ public class UnexpectedFishingReflection
     
     public static String methodToString( Method method )
     {
-        return ( Modifier.toString( method.getModifiers() ) + " " + method.getReturnType() ) != null ? method.getReturnType().getName() : "void" + " " + method.getName();
+        return ( Modifier.toString( method.getModifiers() ) + " " + ( ( method.getReturnType() != null ) ? method.getReturnType().getName() : "void" + " " + method.getName() ) );
     }
 }

@@ -199,6 +199,9 @@ public class UnexpectedFishingListener implements Listener {
     @EventHandler(priority = EventPriority.MONITOR)
     public void onProjectileHit(ProjectileHitEvent event) {
         Projectile proj = event.getEntity();
+        if (proj == null)
+            return;
+        
         UUID projId = proj.getUniqueId();
         if (squidEggIds.contains(projId)) {
             squidEggIds.remove(projId);
@@ -212,6 +215,9 @@ public class UnexpectedFishingListener implements Listener {
     @EventHandler(priority = EventPriority.MONITOR)
     public void onEntityDeath(EntityDeathEvent event) {
         Entity ent = event.getEntity();
+        if (ent == null)
+            return;
+        
         UUID entId = ent.getUniqueId();
         if (squidMobIds.contains(entId)) {
             // One of our squids died.
@@ -225,6 +231,9 @@ public class UnexpectedFishingListener implements Listener {
     @EventHandler(priority = EventPriority.MONITOR)
     public void onEntityExplode(EntityExplodeEvent event) {
         Entity ent = event.getEntity();
+        if (ent == null)
+            return;
+        
         UUID entId = ent.getUniqueId();
         if (tntIds.contains(entId)) {
             tntIds.remove(entId);
